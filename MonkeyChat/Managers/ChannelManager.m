@@ -23,13 +23,11 @@
         self.channel = channel;
     }
     return self;
-
 }
 
 #pragma mark - Send Message
 - (void)sendText:(NSString *)text
 {
-    
     if (self.isPrivateMessage == NO)
     {
         [self.channel message:text];
@@ -37,7 +35,6 @@
                         fromManager:self
                            fromNick:self.channel.session.nickname
                               onDate:[NSDate date]];
-      
     }
     else
     {
@@ -71,7 +68,9 @@
                          onDate:[NSDate date]];
 }
 
-- (void)onMode:(NSString *)mode params:(NSString *)params nick:(NSString *)nick
+- (void)onMode:(NSString *)mode
+        params:(NSString *)params
+          nick:(NSString *)nick
 {
     DLog(@"onMode, mode: %@, params %@, nick: %@", mode, params, nick);
 }
@@ -86,7 +85,9 @@
                          onDate:[NSDate date]];
 }
 
-- (void)onKick:(NSString *)nick reason:(NSString *)reason byNick:(NSString *)byNick
+- (void)onKick:(NSString *)nick
+        reason:(NSString *)reason
+        byNick:(NSString *)byNick
 {
     DLog(@"onKick, nick: %@, reason %@, byNick: %@", nick, reason, byNick);
     
@@ -124,7 +125,6 @@
                     fromManager:self
                        fromNick:nick
                          onDate:[NSDate date]];
-    
 }
 
 

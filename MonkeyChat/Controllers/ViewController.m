@@ -6,13 +6,12 @@
 //  Copyright (c) 2015 Elvin Rakhmankulov. All rights reserved.
 //
 
-#define kHOST                   @"irc.dal.net"
-//#define kHOST                   @"irc.efnet.net"
-#define kPORT                   6667
-#define kNICKNAME               @"BubblesTheChimp"
-#define kUSERNAME               @"bubbles_the_chimp"
-#define kREALNAME               @"Bubbles the Chimp"
-#define kDEFAULT_CHANNEL_NAME   @"#monkeychat"
+#define HOST_NAME                      @"irc.dal.net"
+#define HOST_PORT                      6667
+#define SESSION_NICKNAME               @"BubblesTheChimp"
+#define SESSION_USERNAME               @"bubbles_the_chimp"
+#define SESSION_REALNAME               @"Bubbles the Chimp"
+#define DEFAULT_CHANNEL_NAME           @"#monkeychat"
 
 #import "ViewController.h"
 #import "Server.h"
@@ -36,52 +35,53 @@
 
 @implementation ViewController
 
-- (IBAction)connectButtonPressed:(id)sender {
-    
+- (IBAction)connectButtonPressed:(id)sender
+{
     [self startIRCSession];
 }
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     
     self.formatter = [[NSDateFormatter alloc] init];
     [self.formatter setLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"en_US"]];
     [self.formatter setDateFormat:@"hh:mm a"];
-    
 }
 
-- (void)didReceiveMemoryWarning {
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-- (void)startIRCSession {
+- (void)startIRCSession
+{
     
     [self.activityIndicator startAnimating];
     [self.connectButton setTitle:@"Connecting.." forState:UIControlStateNormal];
     
-    Server *server = [[Server alloc] initWithHost:kHOST
-                                             port:kPORT
-                                         nickname:kNICKNAME
-                                         username:kUSERNAME
-                                         realname:kREALNAME];
+    Server *server = [[Server alloc] initWithHost:HOST_NAME
+                                             port:HOST_PORT
+                                         nickname:SESSION_NICKNAME
+                                         username:SESSION_USERNAME
+                                         realname:SESSION_REALNAME];
     
     self.sessionManager = [[SessionManager alloc] initWithServer:server];
     
     self.sessionManager.delegate = self;
     
-    Channel *channel = [[Channel alloc] initWithChannelName:kDEFAULT_CHANNEL_NAME key:@""];
+    Channel *channel = [[Channel alloc] initWithChannelName:DEFAULT_CHANNEL_NAME key:@""];
     channel.autoJoin = YES;
     
     [[server channels] addObject:channel];
     
     [self.sessionManager connect];
-    
 }
 
 #pragma mark - Helper methods
-- (void)updateChatWindow:(NSString *)text withNick:(NSString *)nick withDate:(NSDate *)date {
-    
+- (void)updateChatWindow:(NSString *)text withNick:(NSString *)nick withDate:(NSDate *)date
+{
     if (nick == nil){
         self.chatTextView.text = [NSString stringWithFormat:@"%@\r%@ %@ ", self.chatTextView.text, [self.formatter stringFromDate:date], text];
     } else {
@@ -89,12 +89,10 @@
     }
     
     [self.chatTextView scrollRangeToVisible:NSMakeRange([self.chatTextView.text length]-1, 1)];
-    
-    
 }
 
-- (void)updateChatWindow:(NSString *)text withDate:(NSDate *)date {
-    
+- (void)updateChatWindow:(NSString *)text withDate:(NSDate *)date
+{
     [self updateChatWindow:text withNick:nil withDate:date];
 }
 
@@ -136,9 +134,9 @@
 
 #pragma mark - UITextView delegate methods
 
-- (BOOL)textFieldShouldReturn:(UITextField *)textField {
-    
-    ChannelManager *channelManager = [self.sessionManager.channelManagers objectForKey:kDEFAULT_CHANNEL_NAME];
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    ChannelManager *channelManager = [self.sessionManager.channelManagers objectForKey:DEFAULT_CHANNEL_NAME];
     
     NSString *text = [textField text];
     [channelManager sendText:text];

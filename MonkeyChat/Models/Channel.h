@@ -15,6 +15,16 @@
 @property bool autoJoin;
 
 -(id)init;
--(id)initWithChannelName:(NSString*)channelName key:(NSString*)channelKey;
+
+/**
+ *  Inits the Channel using channel name and optional key
+ *
+ *  @param channelName Name of the Channel
+ *  @param channelKey  Optional key
+ *
+ *  @return returns instance of iteself
+ */
+-(id)initWithChannelName:(NSString*)channelName
+                     key:(NSString*)channelKey;
 
 @end
