@@ -1,0 +1,559 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4B97608A1ABBCDC300414CC9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B9760891ABBCDC300414CC9 /* Images.xcassets */; };
+		4B97608E1ABBCDCE00414CC9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B97608D1ABBCDCE00414CC9 /* ViewController.m */; };
+		4B97609D1ABBCE0900414CC9 /* ChannelManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B97609A1ABBCE0900414CC9 /* ChannelManager.m */; };
+		4B97609E1ABBCE0900414CC9 /* SessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B97609C1ABBCE0900414CC9 /* SessionManager.m */; };
+		4B9760A41ABBCE1200414CC9 /* Channel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B9760A11ABBCE1200414CC9 /* Channel.m */; };
+		4B9760A51ABBCE1200414CC9 /* Server.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B9760A31ABBCE1200414CC9 /* Server.m */; };
+		4B9760AB1ABBCE2D00414CC9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B9760A81ABBCE2D00414CC9 /* main.m */; };
+		4B9760AE1ABBCE3900414CC9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B9760AD1ABBCE3900414CC9 /* AppDelegate.m */; };
+		4B9760B11ABBCE5100414CC9 /* IRCClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B9760B01ABBCE5100414CC9 /* IRCClient.framework */; };
+		4B9760B71ABBCFD900414CC9 /* IRCClient.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4B9760B01ABBCE5100414CC9 /* IRCClient.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4B9760B81ABBD00900414CC9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B9760901ABBCDF100414CC9 /* LaunchScreen.xib */; };
+		4B9760B91ABBD00C00414CC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B9760921ABBCDF100414CC9 /* Main.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4B1D62D21AB682B500E9081A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4B1D62B01AB682B500E9081A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4B1D62B71AB682B500E9081A;
+			remoteInfo = "IRC-Test";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4B1D62F11AB6931B00E9081A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				4B9760B71ABBCFD900414CC9 /* IRCClient.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		4B1D62B81AB682B500E9081A /* MonkeyChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MonkeyChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B1D62D11AB682B500E9081A /* MonkeyChatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MonkeyChatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B9760891ABBCDC300414CC9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		4B97608C1ABBCDCE00414CC9 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		4B97608D1ABBCDCE00414CC9 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		4B9760911ABBCDF100414CC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		4B9760931ABBCDF100414CC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4B9760971ABBCDFE00414CC9 /* ChatOutputDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatOutputDelegate.h; sourceTree = "<group>"; };
+		4B9760991ABBCE0900414CC9 /* ChannelManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChannelManager.h; sourceTree = "<group>"; };
+		4B97609A1ABBCE0900414CC9 /* ChannelManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChannelManager.m; sourceTree = "<group>"; };
+		4B97609B1ABBCE0900414CC9 /* SessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SessionManager.h; sourceTree = "<group>"; };
+		4B97609C1ABBCE0900414CC9 /* SessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SessionManager.m; sourceTree = "<group>"; };
+		4B9760A01ABBCE1200414CC9 /* Channel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Channel.h; sourceTree = "<group>"; };
+		4B9760A11ABBCE1200414CC9 /* Channel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Channel.m; sourceTree = "<group>"; };
+		4B9760A21ABBCE1200414CC9 /* Server.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Server.h; sourceTree = "<group>"; };
+		4B9760A31ABBCE1200414CC9 /* Server.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Server.m; sourceTree = "<group>"; };
+		4B9760A71ABBCE2D00414CC9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4B9760A81ABBCE2D00414CC9 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4B9760A91ABBCE2D00414CC9 /* MonkeyChat-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MonkeyChat-Prefix.pch"; sourceTree = "<group>"; };
+		4B9760AC1ABBCE3900414CC9 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = MonkeyChat/AppDelegate.h; sourceTree = SOURCE_ROOT; };
+		4B9760AD1ABBCE3900414CC9 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = MonkeyChat/AppDelegate.m; sourceTree = SOURCE_ROOT; };
+		4B9760B01ABBCE5100414CC9 /* IRCClient.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IRCClient.framework; path = External/IRCClient.framework; sourceTree = SOURCE_ROOT; };
+		4B9760B51ABBCF5500414CC9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4B1D62B51AB682B500E9081A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B9760B11ABBCE5100414CC9 /* IRCClient.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4B1D62CE1AB682B500E9081A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4B1D62AF1AB682B500E9081A = {
+			isa = PBXGroup;
+			children = (
+				4B1D62BA1AB682B500E9081A /* MonkeyChat */,
+				4B1D62D41AB682B500E9081A /* MonkeyChatTests */,
+				4B1D62B91AB682B500E9081A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4B1D62B91AB682B500E9081A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4B1D62B81AB682B500E9081A /* MonkeyChat.app */,
+				4B1D62D11AB682B500E9081A /* MonkeyChatTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4B1D62BA1AB682B500E9081A /* MonkeyChat */ = {
+			isa = PBXGroup;
+			children = (
+				4B9760AC1ABBCE3900414CC9 /* AppDelegate.h */,
+				4B9760AD1ABBCE3900414CC9 /* AppDelegate.m */,
+				4B9760A61ABBCE2D00414CC9 /* Supporting Files */,
+				4B97609F1ABBCE1200414CC9 /* Models */,
+				4B9760981ABBCE0900414CC9 /* Managers */,
+				4B9760961ABBCDFE00414CC9 /* Delegates */,
+				4B97608F1ABBCDF100414CC9 /* Views */,
+				4B97608B1ABBCDCE00414CC9 /* Controllers */,
+				4B9760881ABBCDAC00414CC9 /* Resources */,
+				4B1D62E31AB682D200E9081A /* Frameworks */,
+			);
+			name = MonkeyChat;
+			path = "IRC-Test";
+			sourceTree = "<group>";
+		};
+		4B1D62D41AB682B500E9081A /* MonkeyChatTests */ = {
+			isa = PBXGroup;
+			children = (
+				4B9760B41ABBCF5500414CC9 /* Supporting Files */,
+			);
+			name = MonkeyChatTests;
+			path = "IRC-TestTests";
+			sourceTree = "<group>";
+		};
+		4B1D62E31AB682D200E9081A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4B9760AF1ABBCE3F00414CC9 /* External */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4B9760881ABBCDAC00414CC9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4B9760891ABBCDC300414CC9 /* Images.xcassets */,
+			);
+			name = Resources;
+			path = MonkeyChat/Resources;
+			sourceTree = SOURCE_ROOT;
+		};
+		4B97608B1ABBCDCE00414CC9 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4B97608C1ABBCDCE00414CC9 /* ViewController.h */,
+				4B97608D1ABBCDCE00414CC9 /* ViewController.m */,
+			);
+			name = Controllers;
+			path = MonkeyChat/Controllers;
+			sourceTree = SOURCE_ROOT;
+		};
+		4B97608F1ABBCDF100414CC9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4B9760901ABBCDF100414CC9 /* LaunchScreen.xib */,
+				4B9760921ABBCDF100414CC9 /* Main.storyboard */,
+			);
+			name = Views;
+			path = MonkeyChat/Views;
+			sourceTree = SOURCE_ROOT;
+		};
+		4B9760961ABBCDFE00414CC9 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				4B9760971ABBCDFE00414CC9 /* ChatOutputDelegate.h */,
+			);
+			name = Delegates;
+			path = MonkeyChat/Delegates;
+			sourceTree = SOURCE_ROOT;
+		};
+		4B9760981ABBCE0900414CC9 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				4B9760991ABBCE0900414CC9 /* ChannelManager.h */,
+				4B97609A1ABBCE0900414CC9 /* ChannelManager.m */,
+				4B97609B1ABBCE0900414CC9 /* SessionManager.h */,
+				4B97609C1ABBCE0900414CC9 /* SessionManager.m */,
+			);
+			name = Managers;
+			path = MonkeyChat/Managers;
+			sourceTree = SOURCE_ROOT;
+		};
+		4B97609F1ABBCE1200414CC9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4B9760A01ABBCE1200414CC9 /* Channel.h */,
+				4B9760A11ABBCE1200414CC9 /* Channel.m */,
+				4B9760A21ABBCE1200414CC9 /* Server.h */,
+				4B9760A31ABBCE1200414CC9 /* Server.m */,
+			);
+			name = Models;
+			path = MonkeyChat/Models;
+			sourceTree = SOURCE_ROOT;
+		};
+		4B9760A61ABBCE2D00414CC9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4B9760A71ABBCE2D00414CC9 /* Info.plist */,
+				4B9760A81ABBCE2D00414CC9 /* main.m */,
+				4B9760A91ABBCE2D00414CC9 /* MonkeyChat-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			path = "MonkeyChat/Supporting Files";
+			sourceTree = SOURCE_ROOT;
+		};
+		4B9760AF1ABBCE3F00414CC9 /* External */ = {
+			isa = PBXGroup;
+			children = (
+				4B9760B01ABBCE5100414CC9 /* IRCClient.framework */,
+			);
+			name = External;
+			sourceTree = "<group>";
+		};
+		4B9760B41ABBCF5500414CC9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4B9760B51ABBCF5500414CC9 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			path = "MonkeyChatTests/Supporting Files";
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4B1D62B71AB682B500E9081A /* MonkeyChat */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4B1D62DB1AB682B500E9081A /* Build configuration list for PBXNativeTarget "MonkeyChat" */;
+			buildPhases = (
+				4B1D62B41AB682B500E9081A /* Sources */,
+				4B1D62B51AB682B500E9081A /* Frameworks */,
+				4B1D62B61AB682B500E9081A /* Resources */,
+				4B1D62F11AB6931B00E9081A /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MonkeyChat;
+			productName = "IRC-Test";
+			productReference = 4B1D62B81AB682B500E9081A /* MonkeyChat.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4B1D62D01AB682B500E9081A /* MonkeyChatTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4B1D62DE1AB682B500E9081A /* Build configuration list for PBXNativeTarget "MonkeyChatTests" */;
+			buildPhases = (
+				4B1D62CD1AB682B500E9081A /* Sources */,
+				4B1D62CE1AB682B500E9081A /* Frameworks */,
+				4B1D62CF1AB682B500E9081A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4B1D62D31AB682B500E9081A /* PBXTargetDependency */,
+			);
+			name = MonkeyChatTests;
+			productName = "IRC-TestTests";
+			productReference = 4B1D62D11AB682B500E9081A /* MonkeyChatTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4B1D62B01AB682B500E9081A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = "Elvin Rakhmankulov";
+				TargetAttributes = {
+					4B1D62B71AB682B500E9081A = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					4B1D62D01AB682B500E9081A = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = 4B1D62B71AB682B500E9081A;
+					};
+				};
+			};
+			buildConfigurationList = 4B1D62B31AB682B500E9081A /* Build configuration list for PBXProject "MonkeyChat" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4B1D62AF1AB682B500E9081A;
+			productRefGroup = 4B1D62B91AB682B500E9081A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4B1D62B71AB682B500E9081A /* MonkeyChat */,
+				4B1D62D01AB682B500E9081A /* MonkeyChatTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4B1D62B61AB682B500E9081A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B97608A1ABBCDC300414CC9 /* Images.xcassets in Resources */,
+				4B9760B81ABBD00900414CC9 /* LaunchScreen.xib in Resources */,
+				4B9760B91ABBD00C00414CC9 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4B1D62CF1AB682B500E9081A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4B1D62B41AB682B500E9081A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B97608E1ABBCDCE00414CC9 /* ViewController.m in Sources */,
+				4B9760A41ABBCE1200414CC9 /* Channel.m in Sources */,
+				4B97609D1ABBCE0900414CC9 /* ChannelManager.m in Sources */,
+				4B97609E1ABBCE0900414CC9 /* SessionManager.m in Sources */,
+				4B9760AB1ABBCE2D00414CC9 /* main.m in Sources */,
+				4B9760A51ABBCE1200414CC9 /* Server.m in Sources */,
+				4B9760AE1ABBCE3900414CC9 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4B1D62CD1AB682B500E9081A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4B1D62D31AB682B500E9081A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4B1D62B71AB682B500E9081A /* MonkeyChat */;
+			targetProxy = 4B1D62D21AB682B500E9081A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4B9760901ABBCDF100414CC9 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4B9760911ABBCDF100414CC9 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		4B9760921ABBCDF100414CC9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4B9760931ABBCDF100414CC9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4B1D62D91AB682B500E9081A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		4B1D62DA1AB682B500E9081A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4B1D62DC1AB682B500E9081A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MonkeyChat",
+					"$(PROJECT_DIR)/External",
+				);
+				GCC_PREFIX_HEADER = "MonkeyChat/Supporting Files/MonkeyChat-Prefix.pch";
+				INFOPLIST_FILE = "MonkeyChat/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(PROJECT_DIR)/MonkeyChat @executable_path/Frameworks";
+				PRODUCT_NAME = MonkeyChat;
+			};
+			name = Debug;
+		};
+		4B1D62DD1AB682B500E9081A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MonkeyChat",
+					"$(PROJECT_DIR)/External",
+				);
+				GCC_PREFIX_HEADER = "MonkeyChat/Supporting Files/MonkeyChat-Prefix.pch";
+				INFOPLIST_FILE = "MonkeyChat/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(PROJECT_DIR)/MonkeyChat @executable_path/Frameworks";
+				PRODUCT_NAME = MonkeyChat;
+			};
+			name = Release;
+		};
+		4B1D62DF1AB682B500E9081A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "MonkeyChatTests/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = MonkeyChatTests;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IRC-Test.app/IRC-Test";
+			};
+			name = Debug;
+		};
+		4B1D62E01AB682B500E9081A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "MonkeyChatTests/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = MonkeyChatTests;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IRC-Test.app/IRC-Test";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4B1D62B31AB682B500E9081A /* Build configuration list for PBXProject "MonkeyChat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B1D62D91AB682B500E9081A /* Debug */,
+				4B1D62DA1AB682B500E9081A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4B1D62DB1AB682B500E9081A /* Build configuration list for PBXNativeTarget "MonkeyChat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B1D62DC1AB682B500E9081A /* Debug */,
+				4B1D62DD1AB682B500E9081A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4B1D62DE1AB682B500E9081A /* Build configuration list for PBXNativeTarget "MonkeyChatTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B1D62DF1AB682B500E9081A /* Debug */,
+				4B1D62E01AB682B500E9081A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4B1D62B01AB682B500E9081A /* Project object */;
+}

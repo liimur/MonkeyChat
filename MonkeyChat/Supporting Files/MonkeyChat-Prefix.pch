@@ -1,0 +1,16 @@
+//
+//  MonkeyChat-Prefix.pch
+//  MonkeyChat
+//
+//  Created by Elvin Rakhmankulov on 3/17/15.
+//  Copyright (c) 2015 Elvin Rakhmankulov. All rights reserved.
+//
+
+#ifdef DEBUG
+#define DLog(s, ...) NSLog(@"<%@:%d (%@)> %@", [[NSString stringWithUTF8String:__FILE__] lastPathComponent], __LINE__,  NSStringFromSelector(_cmd), [NSString stringWithFormat:(s), ##__VA_ARGS__])
+#define RemoteLog(__FORMAT__, ...) TFLog((@"%s [Line %d] " __FORMAT__), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
+#else
+    #define DLog(s, ...)
+    #define RLog(__FORMAT__, ...)
+#endif
+
