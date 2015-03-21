@@ -229,13 +229,11 @@
 		4B97609F1ABBCE1200414CC9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				4B9760D41ABD3B0400414CC9 /* History.h */,
-				4B9760D51ABD3B0400414CC9 /* History.m */,
+				4BD0AE841ABDBF2D00C73CCE /* Managed Models */,
 				4B9760A01ABBCE1200414CC9 /* Channel.h */,
 				4B9760A11ABBCE1200414CC9 /* Channel.m */,
 				4B9760A21ABBCE1200414CC9 /* Server.h */,
 				4B9760A31ABBCE1200414CC9 /* Server.m */,
-				4B9760BC1ABD378B00414CC9 /* Chat.xcdatamodeld */,
 			);
 			name = Models;
 			path = MonkeyChat/Models;
@@ -268,6 +266,16 @@
 			name = "Supporting Files";
 			path = "MonkeyChatTests/Supporting Files";
 			sourceTree = SOURCE_ROOT;
+		};
+		4BD0AE841ABDBF2D00C73CCE /* Managed Models */ = {
+			isa = PBXGroup;
+			children = (
+				4B9760D41ABD3B0400414CC9 /* History.h */,
+				4B9760D51ABD3B0400414CC9 /* History.m */,
+				4B9760BC1ABD378B00414CC9 /* Chat.xcdatamodeld */,
+			);
+			name = "Managed Models";
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 

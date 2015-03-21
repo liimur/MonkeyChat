@@ -10,7 +10,19 @@
 
 #import "CoreDataManager.h"
 
+static CoreDataManager *_instance;
+
 @implementation CoreDataManager
+
++ (instancetype)sharedManager
+{
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        _instance = [[CoreDataManager alloc] init];
+    });
+    
+    return _instance;
+}
 
 #pragma mark - Core Data stack
 
