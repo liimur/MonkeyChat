@@ -12,6 +12,7 @@
 
 - (id)init
 {
+    self = [super init];
     self.channels = [[NSMutableArray alloc] init];
     return self;
 }
@@ -22,7 +23,8 @@
           username:(NSString*)username
           realname:(NSString*)realname
 {
-    if ([self init])
+    self = [self init];
+    if (self)
     {
         self.hostName = host;
         self.port = port;

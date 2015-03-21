@@ -18,7 +18,8 @@
 }
 - (id)initWithChannel:(IRCClientChannel *)channel
 {
-    if ([self init])
+    self = [self init];
+    if (self)
     {
         self.channel = channel;
     }

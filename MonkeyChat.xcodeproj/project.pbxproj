@@ -27,6 +27,7 @@
 		4B9760DF1ABD3D5700414CC9 /* ChatCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B9760DE1ABD3D5700414CC9 /* ChatCell.m */; };
 		4B9760E21ABD3D7A00414CC9 /* ChannelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B9760E11ABD3D7A00414CC9 /* ChannelCell.m */; };
 		4BD0AE831ABDB80D00C73CCE /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BD0AE821ABDB80D00C73CCE /* CoreDataManager.m */; };
+		4BD0AE8D1ABDCC3900C73CCE /* History+DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BD0AE8C1ABDCC3900C73CCE /* History+DataManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +92,8 @@
 		4B9760E11ABD3D7A00414CC9 /* ChannelCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChannelCell.m; sourceTree = "<group>"; };
 		4BD0AE811ABDB80D00C73CCE /* CoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataManager.h; sourceTree = "<group>"; };
 		4BD0AE821ABDB80D00C73CCE /* CoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataManager.m; sourceTree = "<group>"; };
+		4BD0AE8B1ABDCC3900C73CCE /* History+DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "History+DataManager.h"; sourceTree = "<group>"; };
+		4BD0AE8C1ABDCC3900C73CCE /* History+DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "History+DataManager.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +136,7 @@
 		4B1D62BA1AB682B500E9081A /* MonkeyChat */ = {
 			isa = PBXGroup;
 			children = (
+				4BD0AE8A1ABDC09300C73CCE /* Base */,
 				4B9760AC1ABBCE3900414CC9 /* AppDelegate.h */,
 				4B9760AD1ABBCE3900414CC9 /* AppDelegate.m */,
 				4B9760A61ABBCE2D00414CC9 /* Supporting Files */,
@@ -270,11 +274,20 @@
 		4BD0AE841ABDBF2D00C73CCE /* Managed Models */ = {
 			isa = PBXGroup;
 			children = (
+				4BD0AE8B1ABDCC3900C73CCE /* History+DataManager.h */,
+				4BD0AE8C1ABDCC3900C73CCE /* History+DataManager.m */,
 				4B9760D41ABD3B0400414CC9 /* History.h */,
 				4B9760D51ABD3B0400414CC9 /* History.m */,
 				4B9760BC1ABD378B00414CC9 /* Chat.xcdatamodeld */,
 			);
 			name = "Managed Models";
+			sourceTree = "<group>";
+		};
+		4BD0AE8A1ABDC09300C73CCE /* Base */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -389,6 +402,7 @@
 				4B9760A51ABBCE1200414CC9 /* Server.m in Sources */,
 				4BD0AE831ABDB80D00C73CCE /* CoreDataManager.m in Sources */,
 				4B9760D91ABD3B4700414CC9 /* ChannelsTableViewController.m in Sources */,
+				4BD0AE8D1ABDCC3900C73CCE /* History+DataManager.m in Sources */,
 				4B9760E21ABD3D7A00414CC9 /* ChannelCell.m in Sources */,
 				4B9760DF1ABD3D5700414CC9 /* ChatCell.m in Sources */,
 				4B9760AE1ABBCE3900414CC9 /* AppDelegate.m in Sources */,

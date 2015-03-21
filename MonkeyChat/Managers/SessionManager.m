@@ -14,6 +14,7 @@
 
 - (id)init
 {
+    self = [super init];
     self.session = [[IRCClientSession alloc] init];
     self.channels = [[NSMutableDictionary alloc] init];
     self.channelManagers = [[NSMutableDictionary alloc] init];
@@ -23,7 +24,8 @@
 
 - (id)initWithServer:(Server *)sessionServer
 {
-    if ([self init])
+    self = [self init];
+    if (self)
     {
         self.server = sessionServer;
         
