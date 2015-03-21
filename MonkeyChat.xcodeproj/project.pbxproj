@@ -26,6 +26,7 @@
 		4B9760DC1ABD3B7700414CC9 /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B9760DB1ABD3B7700414CC9 /* ChatViewController.m */; };
 		4B9760DF1ABD3D5700414CC9 /* ChatCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B9760DE1ABD3D5700414CC9 /* ChatCell.m */; };
 		4B9760E21ABD3D7A00414CC9 /* ChannelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B9760E11ABD3D7A00414CC9 /* ChannelCell.m */; };
+		4BD0AE831ABDB80D00C73CCE /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BD0AE821ABDB80D00C73CCE /* CoreDataManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +89,8 @@
 		4B9760DE1ABD3D5700414CC9 /* ChatCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatCell.m; sourceTree = "<group>"; };
 		4B9760E01ABD3D7A00414CC9 /* ChannelCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChannelCell.h; sourceTree = "<group>"; };
 		4B9760E11ABD3D7A00414CC9 /* ChannelCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChannelCell.m; sourceTree = "<group>"; };
+		4BD0AE811ABDB80D00C73CCE /* CoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataManager.h; sourceTree = "<group>"; };
+		4BD0AE821ABDB80D00C73CCE /* CoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,6 +219,8 @@
 				4B97609A1ABBCE0900414CC9 /* ChannelManager.m */,
 				4B97609B1ABBCE0900414CC9 /* SessionManager.h */,
 				4B97609C1ABBCE0900414CC9 /* SessionManager.m */,
+				4BD0AE811ABDB80D00C73CCE /* CoreDataManager.h */,
+				4BD0AE821ABDB80D00C73CCE /* CoreDataManager.m */,
 			);
 			name = Managers;
 			path = MonkeyChat/Managers;
@@ -374,6 +379,7 @@
 				4B97609E1ABBCE0900414CC9 /* SessionManager.m in Sources */,
 				4B9760AB1ABBCE2D00414CC9 /* main.m in Sources */,
 				4B9760A51ABBCE1200414CC9 /* Server.m in Sources */,
+				4BD0AE831ABDB80D00C73CCE /* CoreDataManager.m in Sources */,
 				4B9760D91ABD3B4700414CC9 /* ChannelsTableViewController.m in Sources */,
 				4B9760E21ABD3D7A00414CC9 /* ChannelCell.m in Sources */,
 				4B9760DF1ABD3D5700414CC9 /* ChatCell.m in Sources */,
