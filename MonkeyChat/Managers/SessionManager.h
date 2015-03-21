@@ -27,6 +27,13 @@
 - (id)initWithServer:(Server *)sessionServer;
 - (void)connect;
 
+/**
+ *  Requests List of all channels on the server
+ *
+ *  @param channelName If channelName is given, it will return the channel topic.
+ */
+- (void)serverChannels:(NSString *)channelName;
+
 #pragma mark - Session Delegate methods
 
 /** The client has successfully connected to the IRC server. */

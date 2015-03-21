@@ -10,4 +10,9 @@
 
 @interface ChannelCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UILabel *channelOrNickName;
+@property (weak, nonatomic) IBOutlet UILabel *numberOfPeople;
+@property (weak, nonatomic) IBOutlet UILabel *numberOfMessages;
+@property (weak, nonatomic) IBOutlet UILabel *topic;
+
 @end

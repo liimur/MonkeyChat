@@ -7,7 +7,14 @@
         <attribute name="server" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="time" optional="YES" attributeType="Date" syncable="YES"/>
     </entity>
+    <entity name="ServerChannel" representedClassName="ServerChannel" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="numberOfUsers" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="server" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="topic" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <elements>
         <element name="History" positionX="-54" positionY="-9" width="128" height="120"/>
+        <element name="ServerChannel" positionX="-54" positionY="27" width="128" height="103"/>
     </elements>
 </model>

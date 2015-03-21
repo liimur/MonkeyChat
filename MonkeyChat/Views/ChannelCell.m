@@ -9,11 +9,6 @@
 #import "ChannelCell.h"
 
 @interface ChannelCell()
-@property (weak, nonatomic) IBOutlet UILabel *channelOrNickName;
-
-@property (weak, nonatomic) IBOutlet UILabel *numberOfPeople;
-@property (weak, nonatomic) IBOutlet UILabel *numberOfMessages;
-
 
 @end
 

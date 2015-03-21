@@ -7,6 +7,7 @@
 //
 
 #import "ChannelManager.h"
+#import "History+DataManager.h"
 
 #import <IRCClient/IRCClientSession.h>
 
@@ -98,6 +99,7 @@
                          onDate:[NSDate date]];
 }
 
+//TODO: Figure out how to get server name here
 - (void)onPrivmsg:(NSString *)message nick:(NSString *)nick
 {
     DLog(@"onPrivmsg, message %@, nick: %@", message, nick);
@@ -106,6 +108,12 @@
                     fromManager:self
                        fromNick:nick
                          onDate:[NSDate date]];
+    
+    [[History new] saveWithChannel:self.channel.name
+                           message:message
+                              time:[NSDate date]
+                          nickname:[self cleanNickname:nick]
+                            server:@"DALNET"];
 }
 
 - (void)onNotice:(NSString *)notice nick:(NSString *)nick
@@ -128,6 +136,25 @@
                          onDate:[NSDate date]];
 }
 
+#pragma mark - Helper methods
+
+- (NSString *)cleanNickname:(NSString *)rawNickname
+{
+    NSString *cleanNick = rawNickname;
+    if ([rawNickname length] > 0)
+    {
+        NSRange range = [rawNickname rangeOfString:@"!"];
+        if (range.location != NSNotFound)
+        {
+            cleanNick = [NSString stringWithFormat:@"<%@>", [rawNickname substringToIndex:range.location]];
+        }
+        else
+        {
+            cleanNick = [NSString stringWithFormat:@"<%@>", rawNickname];
+        }
+    }
+    return cleanNick;
+}
 
 
 @end

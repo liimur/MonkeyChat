@@ -12,4 +12,9 @@
 
 + (History *)new;
 
+- (void)saveWithChannel:(NSString *)channel
+                message:(NSString *)message
+                   time:(NSDate *)time
+               nickname:(NSString *)nickname
+                 server:(NSString *)server;
 @end

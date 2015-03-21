@@ -8,6 +8,8 @@
 
 #import "ChatViewController.h"
 #import "CoreDataManager.h"
+#import "ChatCell.h"
+#import "History.h"
 
 @interface ChatViewController () <NSFetchedResultsControllerDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *chatHistoryTableView;
@@ -15,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *messageText;
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+@property (strong, nonatomic) NSDateFormatter *formatter;
 @end
 
 @implementation ChatViewController
@@ -23,6 +26,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.formatter = [[NSDateFormatter alloc] init];
+    [self.formatter setLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"en_US"]];
+    [self.formatter setDateFormat:@"hh:mm a"];
     
     self.managedObjectContext = [[CoreDataManager sharedManager] managedObjectContext];
 }
@@ -44,7 +51,7 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ChatCell" forIndexPath:indexPath];
+    ChatCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ChatCell" forIndexPath:indexPath];
     [self configureCell:cell atIndexPath:indexPath];
     return cell;
 }
@@ -61,10 +68,13 @@
     return NO;
 }
 
-- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
+- (void)configureCell:(ChatCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
-    NSManagedObject *object = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    cell.textLabel.text = [[object valueForKey:@"timeStamp"] description];
+    History *object = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    cell.message.text = object.message;
+    cell.nickname.text = object.nickname;
+    cell.time.text = [self.formatter stringFromDate:object.time];
+    
 }
 
 #pragma mark - Fetched results controller
@@ -84,7 +94,7 @@
     [fetchRequest setFetchBatchSize:20];
     
     // Edit the sort key as appropriate.
-    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"time" ascending:NO];
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"time" ascending:YES];
     NSArray *sortDescriptors = @[sortDescriptor];
     
     [fetchRequest setSortDescriptors:sortDescriptors];
@@ -146,7 +156,7 @@
             break;
             
         case NSFetchedResultsChangeUpdate:
-            [self configureCell:[tableView cellForRowAtIndexPath:indexPath] atIndexPath:indexPath];
+            [self configureCell:(ChatCell *)[tableView cellForRowAtIndexPath:indexPath] atIndexPath:indexPath];
             break;
             
         case NSFetchedResultsChangeMove:

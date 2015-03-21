@@ -9,9 +9,7 @@
 #import "ChatCell.h"
 
 @interface ChatCell()
-@property (weak, nonatomic) IBOutlet UILabel *nickname;
-@property (weak, nonatomic) IBOutlet UILabel *message;
-@property (weak, nonatomic) IBOutlet UILabel *time;
+
 @end
 
 @implementation ChatCell

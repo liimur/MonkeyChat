@@ -19,11 +19,11 @@
     return newHistoryRecord;
 }
 
-- (void)saveWithData:(NSString *)channel
-             message:(NSString *)message
-                time:(NSDate *)time
-            nickname:(NSString *)nickname
-              server:(NSString *)server
+- (void)saveWithChannel:(NSString *)channel
+                message:(NSString *)message
+                   time:(NSDate *)time
+               nickname:(NSString *)nickname
+                 server:(NSString *)server;
 {
     self.channel = channel;
     self.message = message;
@@ -37,9 +37,4 @@
         DLog(@"Error: %@", [error localizedDescription]);
     }
 }
-
-
-
-
-
 @end

@@ -28,6 +28,8 @@
 		4B9760E21ABD3D7A00414CC9 /* ChannelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B9760E11ABD3D7A00414CC9 /* ChannelCell.m */; };
 		4BD0AE831ABDB80D00C73CCE /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BD0AE821ABDB80D00C73CCE /* CoreDataManager.m */; };
 		4BD0AE8D1ABDCC3900C73CCE /* History+DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BD0AE8C1ABDCC3900C73CCE /* History+DataManager.m */; };
+		4BD0AE901ABDF52200C73CCE /* ServerChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BD0AE8F1ABDF52200C73CCE /* ServerChannel.m */; };
+		4BD0AE931ABDFB9000C73CCE /* ServerChannel+DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BD0AE921ABDFB9000C73CCE /* ServerChannel+DataManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +96,10 @@
 		4BD0AE821ABDB80D00C73CCE /* CoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataManager.m; sourceTree = "<group>"; };
 		4BD0AE8B1ABDCC3900C73CCE /* History+DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "History+DataManager.h"; sourceTree = "<group>"; };
 		4BD0AE8C1ABDCC3900C73CCE /* History+DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "History+DataManager.m"; sourceTree = "<group>"; };
+		4BD0AE8E1ABDF52200C73CCE /* ServerChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerChannel.h; sourceTree = "<group>"; };
+		4BD0AE8F1ABDF52200C73CCE /* ServerChannel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerChannel.m; sourceTree = "<group>"; };
+		4BD0AE911ABDFB9000C73CCE /* ServerChannel+DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ServerChannel+DataManager.h"; sourceTree = "<group>"; };
+		4BD0AE921ABDFB9000C73CCE /* ServerChannel+DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ServerChannel+DataManager.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -278,6 +284,10 @@
 				4BD0AE8C1ABDCC3900C73CCE /* History+DataManager.m */,
 				4B9760D41ABD3B0400414CC9 /* History.h */,
 				4B9760D51ABD3B0400414CC9 /* History.m */,
+				4BD0AE911ABDFB9000C73CCE /* ServerChannel+DataManager.h */,
+				4BD0AE921ABDFB9000C73CCE /* ServerChannel+DataManager.m */,
+				4BD0AE8E1ABDF52200C73CCE /* ServerChannel.h */,
+				4BD0AE8F1ABDF52200C73CCE /* ServerChannel.m */,
 				4B9760BC1ABD378B00414CC9 /* Chat.xcdatamodeld */,
 			);
 			name = "Managed Models";
@@ -402,9 +412,11 @@
 				4B9760A51ABBCE1200414CC9 /* Server.m in Sources */,
 				4BD0AE831ABDB80D00C73CCE /* CoreDataManager.m in Sources */,
 				4B9760D91ABD3B4700414CC9 /* ChannelsTableViewController.m in Sources */,
+				4BD0AE901ABDF52200C73CCE /* ServerChannel.m in Sources */,
 				4BD0AE8D1ABDCC3900C73CCE /* History+DataManager.m in Sources */,
 				4B9760E21ABD3D7A00414CC9 /* ChannelCell.m in Sources */,
 				4B9760DF1ABD3D5700414CC9 /* ChatCell.m in Sources */,
+				4BD0AE931ABDFB9000C73CCE /* ServerChannel+DataManager.m in Sources */,
 				4B9760AE1ABBCE3900414CC9 /* AppDelegate.m in Sources */,
 				4B9760D61ABD3B0400414CC9 /* History.m in Sources */,
 			);

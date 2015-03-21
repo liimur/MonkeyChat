@@ -9,6 +9,8 @@
 #import "SessionManager.h"
 #import "Channel.h"
 #import "ChannelManager.h"
+#import "History+DataManager.h"
+#import "ServerChannel+DataManager.h"
 
 @implementation SessionManager
 
@@ -54,6 +56,12 @@
     [self.session run];
 }
 
+- (void)serverChannels:(NSString *)channelName
+{
+    [self.session list:nil];
+}
+
+
 
 #pragma mark - IRCClientSessionDelegate methods
 
@@ -71,6 +79,7 @@
         }
     }
     [self.delegate connectedToSession];
+    [self serverChannels:nil];
 }
 
 - (void)onNick:(NSString *)nick oldNick:(NSString *)oldNick
@@ -139,6 +148,12 @@
                     fromManager:self
                        fromNick:nick
                          onDate:[NSDate date]];
+    
+//    [[History new] saveWithChannel:self.channels
+//                           message:[[NSString alloc] initWithData:message encoding:NSUTF8StringEncoding]
+//                              time:[NSDate date]
+//                          nickname:nick
+//                            server:self.server.host];
 }
 
 - (void)onNotice:(NSData *)notice nick:(NSString *)nick
@@ -195,7 +210,23 @@
 - (void)onNumericEvent:(NSUInteger)event origin:(NSString *)origin params:(NSArray *)params
 {
     DLog(@"onNumericEvent, event: %lu, origin: %@, params: %@", (unsigned long)event, origin, params);
+    
+    switch (event) {
+        case LIBIRC_RFC_RPL_LIST:
+            if ([(NSString *)params[1] length]>0)
+            {
+                [[ServerChannel new] saveWithName:params[1]
+                                    numberOfUsers:(NSInteger)params[2]
+                                            topic:params[3]
+                                           server:@"DALNET"];
+            }
+            break;
+            
+        default:
+            break;
+    }
 }
 
+#pragma mark - Helper methods
 
 @end

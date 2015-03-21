@@ -7,8 +7,14 @@
 //
 
 #import "AppDelegate.h"
+#import "Server.h"
+#import "Channel.h"
+#import "SessionManager.h"
+#import "ChannelManager.h"
 
 @interface AppDelegate ()
+
+@property (strong, nonatomic) SessionManager *sessionManager;
 
 @end
 
@@ -16,8 +22,29 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    [self startIRCSession];
     return YES;
+}
+
+- (void)startIRCSession
+{
+    
+    Server *server = [[Server alloc] initWithHost:HOST_NAME
+                                             port:HOST_PORT
+                                         nickname:SESSION_NICKNAME
+                                         username:SESSION_USERNAME
+                                         realname:SESSION_REALNAME];
+    
+    self.sessionManager = [[SessionManager alloc] initWithServer:server];
+    
+//    self.sessionManager.delegate = self;
+    
+    Channel *channel = [[Channel alloc] initWithChannelName:DEFAULT_CHANNEL_NAME key:@""];
+    channel.autoJoin = YES;
+    
+    [[server channels] addObject:channel];
+    
+    [self.sessionManager connect];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
