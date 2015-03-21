@@ -19,6 +19,13 @@
 		4B9760B71ABBCFD900414CC9 /* IRCClient.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4B9760B01ABBCE5100414CC9 /* IRCClient.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4B9760B81ABBD00900414CC9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B9760901ABBCDF100414CC9 /* LaunchScreen.xib */; };
 		4B9760B91ABBD00C00414CC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B9760921ABBCDF100414CC9 /* Main.storyboard */; };
+		4B9760BE1ABD378B00414CC9 /* Chat.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4B9760BC1ABD378B00414CC9 /* Chat.xcdatamodeld */; };
+		4B9760C11ABD388E00414CC9 /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B9760BF1ABD388E00414CC9 /* Chat.storyboard */; };
+		4B9760D61ABD3B0400414CC9 /* History.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B9760D51ABD3B0400414CC9 /* History.m */; };
+		4B9760D91ABD3B4700414CC9 /* ChannelsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B9760D81ABD3B4700414CC9 /* ChannelsTableViewController.m */; };
+		4B9760DC1ABD3B7700414CC9 /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B9760DB1ABD3B7700414CC9 /* ChatViewController.m */; };
+		4B9760DF1ABD3D5700414CC9 /* ChatCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B9760DE1ABD3D5700414CC9 /* ChatCell.m */; };
+		4B9760E21ABD3D7A00414CC9 /* ChannelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B9760E11ABD3D7A00414CC9 /* ChannelCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +76,18 @@
 		4B9760AD1ABBCE3900414CC9 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = MonkeyChat/AppDelegate.m; sourceTree = SOURCE_ROOT; };
 		4B9760B01ABBCE5100414CC9 /* IRCClient.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IRCClient.framework; path = External/IRCClient.framework; sourceTree = SOURCE_ROOT; };
 		4B9760B51ABBCF5500414CC9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4B9760BD1ABD378B00414CC9 /* Chat.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Chat.xcdatamodel; sourceTree = "<group>"; };
+		4B9760C01ABD388E00414CC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Chat.storyboard; sourceTree = "<group>"; };
+		4B9760D41ABD3B0400414CC9 /* History.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = History.h; sourceTree = "<group>"; };
+		4B9760D51ABD3B0400414CC9 /* History.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = History.m; sourceTree = "<group>"; };
+		4B9760D71ABD3B4700414CC9 /* ChannelsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChannelsTableViewController.h; sourceTree = "<group>"; };
+		4B9760D81ABD3B4700414CC9 /* ChannelsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChannelsTableViewController.m; sourceTree = "<group>"; };
+		4B9760DA1ABD3B7700414CC9 /* ChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatViewController.h; sourceTree = "<group>"; };
+		4B9760DB1ABD3B7700414CC9 /* ChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatViewController.m; sourceTree = "<group>"; };
+		4B9760DD1ABD3D5700414CC9 /* ChatCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatCell.h; sourceTree = "<group>"; };
+		4B9760DE1ABD3D5700414CC9 /* ChatCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatCell.m; sourceTree = "<group>"; };
+		4B9760E01ABD3D7A00414CC9 /* ChannelCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChannelCell.h; sourceTree = "<group>"; };
+		4B9760E11ABD3D7A00414CC9 /* ChannelCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChannelCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +176,10 @@
 			children = (
 				4B97608C1ABBCDCE00414CC9 /* ViewController.h */,
 				4B97608D1ABBCDCE00414CC9 /* ViewController.m */,
+				4B9760D71ABD3B4700414CC9 /* ChannelsTableViewController.h */,
+				4B9760D81ABD3B4700414CC9 /* ChannelsTableViewController.m */,
+				4B9760DA1ABD3B7700414CC9 /* ChatViewController.h */,
+				4B9760DB1ABD3B7700414CC9 /* ChatViewController.m */,
 			);
 			name = Controllers;
 			path = MonkeyChat/Controllers;
@@ -165,8 +188,13 @@
 		4B97608F1ABBCDF100414CC9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4B9760BF1ABD388E00414CC9 /* Chat.storyboard */,
 				4B9760901ABBCDF100414CC9 /* LaunchScreen.xib */,
 				4B9760921ABBCDF100414CC9 /* Main.storyboard */,
+				4B9760DD1ABD3D5700414CC9 /* ChatCell.h */,
+				4B9760DE1ABD3D5700414CC9 /* ChatCell.m */,
+				4B9760E01ABD3D7A00414CC9 /* ChannelCell.h */,
+				4B9760E11ABD3D7A00414CC9 /* ChannelCell.m */,
 			);
 			name = Views;
 			path = MonkeyChat/Views;
@@ -196,10 +224,13 @@
 		4B97609F1ABBCE1200414CC9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				4B9760D41ABD3B0400414CC9 /* History.h */,
+				4B9760D51ABD3B0400414CC9 /* History.m */,
 				4B9760A01ABBCE1200414CC9 /* Channel.h */,
 				4B9760A11ABBCE1200414CC9 /* Channel.m */,
 				4B9760A21ABBCE1200414CC9 /* Server.h */,
 				4B9760A31ABBCE1200414CC9 /* Server.m */,
+				4B9760BC1ABD378B00414CC9 /* Chat.xcdatamodeld */,
 			);
 			name = Models;
 			path = MonkeyChat/Models;
@@ -316,6 +347,7 @@
 			files = (
 				4B97608A1ABBCDC300414CC9 /* Images.xcassets in Resources */,
 				4B9760B81ABBD00900414CC9 /* LaunchScreen.xib in Resources */,
+				4B9760C11ABD388E00414CC9 /* Chat.storyboard in Resources */,
 				4B9760B91ABBD00C00414CC9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -335,12 +367,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B97608E1ABBCDCE00414CC9 /* ViewController.m in Sources */,
+				4B9760BE1ABD378B00414CC9 /* Chat.xcdatamodeld in Sources */,
 				4B9760A41ABBCE1200414CC9 /* Channel.m in Sources */,
 				4B97609D1ABBCE0900414CC9 /* ChannelManager.m in Sources */,
+				4B9760DC1ABD3B7700414CC9 /* ChatViewController.m in Sources */,
 				4B97609E1ABBCE0900414CC9 /* SessionManager.m in Sources */,
 				4B9760AB1ABBCE2D00414CC9 /* main.m in Sources */,
 				4B9760A51ABBCE1200414CC9 /* Server.m in Sources */,
+				4B9760D91ABD3B4700414CC9 /* ChannelsTableViewController.m in Sources */,
+				4B9760E21ABD3D7A00414CC9 /* ChannelCell.m in Sources */,
+				4B9760DF1ABD3D5700414CC9 /* ChatCell.m in Sources */,
 				4B9760AE1ABBCE3900414CC9 /* AppDelegate.m in Sources */,
+				4B9760D61ABD3B0400414CC9 /* History.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,6 +414,14 @@
 				4B9760931ABBCDF100414CC9 /* Base */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4B9760BF1ABD388E00414CC9 /* Chat.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4B9760C01ABD388E00414CC9 /* Base */,
+			);
+			name = Chat.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -554,6 +600,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		4B9760BC1ABD378B00414CC9 /* Chat.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4B9760BD1ABD378B00414CC9 /* Chat.xcdatamodel */,
+			);
+			currentVersion = 4B9760BD1ABD378B00414CC9 /* Chat.xcdatamodel */;
+			path = Chat.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 4B1D62B01AB682B500E9081A /* Project object */;
 }
