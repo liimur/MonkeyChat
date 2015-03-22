@@ -21,6 +21,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+#ifdef __IPHONE_8_0
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
+    self.tableView.estimatedRowHeight = 44.0;
+#endif
+    
     self.managedObjectContext = [[CoreDataManager sharedManager] managedObjectContext];
 }
 

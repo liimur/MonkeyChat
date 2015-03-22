@@ -27,6 +27,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+#ifdef __IPHONE_8_0
+    self.chatHistoryTableView.rowHeight = UITableViewAutomaticDimension;
+    self.chatHistoryTableView.estimatedRowHeight = 44.0;
+#endif
+    
     self.formatter = [[NSDateFormatter alloc] init];
     [self.formatter setLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"en_US"]];
     [self.formatter setDateFormat:@"hh:mm a"];

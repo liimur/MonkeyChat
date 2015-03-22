@@ -146,11 +146,11 @@
         NSRange range = [rawNickname rangeOfString:@"!"];
         if (range.location != NSNotFound)
         {
-            cleanNick = [NSString stringWithFormat:@"<%@>", [rawNickname substringToIndex:range.location]];
+            cleanNick = [NSString stringWithFormat:@"%@:", [rawNickname substringToIndex:range.location]];
         }
         else
         {
-            cleanNick = [NSString stringWithFormat:@"<%@>", rawNickname];
+            cleanNick = [NSString stringWithFormat:@"%@:", rawNickname];
         }
     }
     return cleanNick;
