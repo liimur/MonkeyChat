@@ -68,7 +68,7 @@
 - (void)configureCell:(ChannelCell *)cell atIndexPath:(NSIndexPath *)indexPath {
     ServerChannel *object = [self.fetchedResultsController objectAtIndexPath:indexPath];
     cell.channelOrNickName.text = object.name;
-    cell.numberOfPeople.text = [NSString stringWithFormat:@"%@", object.numberOfUsers];
+    cell.numberOfPeople.text = [object.numberOfUsers stringValue];
     cell.topic.text = object.topic;
 }
 

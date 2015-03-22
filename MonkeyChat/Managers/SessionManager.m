@@ -11,6 +11,7 @@
 #import "ChannelManager.h"
 #import "History+DataManager.h"
 #import "ServerChannel+DataManager.h"
+#import "CoreDataManager.h"
 
 @implementation SessionManager
 
@@ -215,11 +216,20 @@
         case LIBIRC_RFC_RPL_LIST:
             if ([(NSString *)params[1] length]>0)
             {
-                [[ServerChannel new] saveWithName:params[1]
-                                    numberOfUsers:(NSInteger)params[2]
+                [[ServerChannel new] addWithName:params[1]
+                                    numberOfUsers:[params[2] intValue]
                                             topic:params[3]
                                            server:@"DALNET"];
             }
+            break;
+        case LIBIRC_RFC_RPL_LISTEND:
+        {
+            NSError *error = nil;
+            [[CoreDataManager sharedManager].managedObjectContext save:&error];
+            if (error){
+                DLog(@"Error: %@:", error.localizedDescription);
+            }
+        }
             break;
             
         default:

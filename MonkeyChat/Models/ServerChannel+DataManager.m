@@ -19,21 +19,21 @@
     return newServerChannelObject;
 }
 
-- (void)saveWithName:(NSString *)name
-       numberOfUsers:(NSInteger)numberOfUsers
+- (void)addWithName:(NSString *)name
+       numberOfUsers:(int)numberOfUsers
                topic:(NSString *)topic
               server:(NSString *)server
 {
-    self.numberOfUsers = [NSNumber numberWithInteger:numberOfUsers];
+    self.numberOfUsers = [NSNumber numberWithInt:numberOfUsers];
     self.name = name;
     self.topic = topic;
     self.server = server;
     
-    NSError *error;
-    [self.managedObjectContext save:&error];
-    if (error){
-        DLog(@"Error: %@", [error localizedDescription]);
-    }
+//    NSError *error;
+//    [self.managedObjectContext save:&error];
+//    if (error){
+//        DLog(@"Error: %@", [error localizedDescription]);
+//    }
 }
 
 

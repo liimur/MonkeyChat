@@ -12,8 +12,8 @@
 
 + (ServerChannel *)new;
 
-- (void)saveWithName:(NSString *)name
-       numberOfUsers:(NSInteger)numberOfUsers
+- (void)addWithName:(NSString *)name
+       numberOfUsers:(int)numberOfUsers
                topic:(NSString *)topic
               server:(NSString *)server;
 
