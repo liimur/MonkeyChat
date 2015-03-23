@@ -6,12 +6,12 @@
 //  Copyright (c) 2015 Elvin Rakhmankulov. All rights reserved.
 //
 
-#define HOST_NAME                      @"irc.dal.net"
-#define HOST_PORT                      6667
-#define SESSION_NICKNAME               @"BubblesTheChimp"
-#define SESSION_USERNAME               @"bubbles_the_chimp"
-#define SESSION_REALNAME               @"Bubbles the Chimp"
-#define DEFAULT_CHANNEL_NAME           @"#monkeychat"
+#define SESSION_HOST_NAME                       @"irc.dal.net"
+#define SESSION_HOST_PORT                       6667
+#define SESSION_NICKNAME                        @"BubblesTheChimp"
+#define SESSION_USERNAME                        @"bubbles_the_chimp"
+#define SESSION_REALNAME                        @"Bubbles the Chimp"
+#define DEFAULT_CHANNEL_NAME                    @"#monkeychat"
 
 #import <UIKit/UIKit.h>
 

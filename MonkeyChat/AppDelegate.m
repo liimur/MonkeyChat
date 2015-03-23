@@ -29,15 +29,13 @@
 - (void)startIRCSession
 {
     
-    Server *server = [[Server alloc] initWithHost:HOST_NAME
-                                             port:HOST_PORT
+    Server *server = [[Server alloc] initWithHost:SESSION_HOST_NAME
+                                             port:SESSION_HOST_PORT
                                          nickname:SESSION_NICKNAME
                                          username:SESSION_USERNAME
                                          realname:SESSION_REALNAME];
     
     self.sessionManager = [[SessionManager alloc] initWithServer:server];
-    
-//    self.sessionManager.delegate = self;
     
     Channel *channel = [[Channel alloc] initWithChannelName:DEFAULT_CHANNEL_NAME key:@""];
     channel.autoJoin = YES;

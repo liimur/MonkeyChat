@@ -129,20 +129,20 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CkT-Lz-Rp1" id="EJF-eT-Hws">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Channel Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bPM-MU-4Es">
-                                            <rect key="frame" x="8" y="0.0" width="584" height="24"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Channel Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bPM-MU-4Es">
+                                            <rect key="frame" x="45" y="8" width="483" height="24"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                             <color key="textColor" red="1" green="0.0" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Topic" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b7o-hz-qqB">
-                                            <rect key="frame" x="45" y="23" width="483" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Topic" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b7o-hz-qqB">
+                                            <rect key="frame" x="8" y="27" width="584" height="17"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="99" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Zx-CH-Rvo">
-                                            <rect key="frame" x="542" y="24" width="20" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Zx-CH-Rvo">
+                                            <rect key="frame" x="557" y="9" width="29" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -151,26 +151,77 @@
                                     <constraints>
                                         <constraint firstItem="b7o-hz-qqB" firstAttribute="leading" secondItem="EJF-eT-Hws" secondAttribute="leadingMargin" constant="37" id="08c-r3-nC0"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="b7o-hz-qqB" secondAttribute="trailing" constant="64" id="0Me-kT-LzD"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="7Zx-CH-Rvo" secondAttribute="trailing" constant="30" id="6Ji-SL-5yG"/>
+                                        <constraint firstItem="7Zx-CH-Rvo" firstAttribute="centerY" secondItem="EJF-eT-Hws" secondAttribute="centerY" id="0xD-Yc-CbJ"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="7Zx-CH-Rvo" secondAttribute="bottom" constant="6" id="10f-50-rKv"/>
+                                        <constraint firstItem="bPM-MU-4Es" firstAttribute="leading" secondItem="b7o-hz-qqB" secondAttribute="leading" id="1Rc-x4-EkD"/>
+                                        <constraint firstAttribute="centerX" secondItem="bPM-MU-4Es" secondAttribute="centerX" constant="13.5" id="3Cd-lc-rCI"/>
+                                        <constraint firstItem="7Zx-CH-Rvo" firstAttribute="leading" secondItem="bPM-MU-4Es" secondAttribute="trailing" constant="29" id="3DV-Vt-XVn"/>
+                                        <constraint firstItem="b7o-hz-qqB" firstAttribute="leading" secondItem="EJF-eT-Hws" secondAttribute="leadingMargin" id="3G8-us-czL"/>
                                         <constraint firstItem="bPM-MU-4Es" firstAttribute="trailing" secondItem="EJF-eT-Hws" secondAttribute="trailingMargin" id="8Yi-Zh-liF"/>
+                                        <constraint firstItem="7Zx-CH-Rvo" firstAttribute="baseline" secondItem="bPM-MU-4Es" secondAttribute="baseline" id="96D-RW-YxI"/>
                                         <constraint firstItem="7Zx-CH-Rvo" firstAttribute="trailing" secondItem="EJF-eT-Hws" secondAttribute="trailingMargin" id="Bsj-ob-wFD"/>
+                                        <constraint firstItem="b7o-hz-qqB" firstAttribute="top" secondItem="bPM-MU-4Es" secondAttribute="bottom" constant="-1" id="C9S-vK-9jX"/>
+                                        <constraint firstItem="7Zx-CH-Rvo" firstAttribute="trailing" secondItem="EJF-eT-Hws" secondAttribute="trailingMargin" id="CFy-Wh-Efd"/>
+                                        <constraint firstItem="bPM-MU-4Es" firstAttribute="leading" secondItem="EJF-eT-Hws" secondAttribute="leadingMargin" constant="37" id="DER-e3-YeD"/>
                                         <constraint firstItem="b7o-hz-qqB" firstAttribute="top" secondItem="bPM-MU-4Es" secondAttribute="bottom" constant="-1" id="EpI-Fh-ace"/>
                                         <constraint firstItem="7Zx-CH-Rvo" firstAttribute="top" secondItem="EJF-eT-Hws" secondAttribute="topMargin" constant="3" id="Eyg-5I-gNi"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="7Zx-CH-Rvo" secondAttribute="bottom" constant="14" id="GgX-vL-BBr"/>
+                                        <constraint firstItem="7Zx-CH-Rvo" firstAttribute="top" secondItem="EJF-eT-Hws" secondAttribute="topMargin" constant="1" id="HQ1-qd-MrS"/>
+                                        <constraint firstItem="bPM-MU-4Es" firstAttribute="top" secondItem="EJF-eT-Hws" secondAttribute="topMargin" id="IUg-tB-Dt9"/>
+                                        <constraint firstItem="b7o-hz-qqB" firstAttribute="top" secondItem="EJF-eT-Hws" secondAttribute="topMargin" constant="13" id="Ijd-hm-Pu4"/>
                                         <constraint firstItem="bPM-MU-4Es" firstAttribute="leading" secondItem="EJF-eT-Hws" secondAttribute="leadingMargin" id="JXm-dS-bEE"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="7Zx-CH-Rvo" secondAttribute="bottom" constant="4" id="Ke9-go-eFf"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="bPM-MU-4Es" secondAttribute="bottom" constant="3.5" id="LIs-Of-ghd"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="bPM-MU-4Es" secondAttribute="bottom" constant="3.5" id="Nof-tN-Chj"/>
                                         <constraint firstItem="7Zx-CH-Rvo" firstAttribute="top" secondItem="bPM-MU-4Es" secondAttribute="bottom" id="OPq-5O-p0G"/>
-                                        <constraint firstItem="7Zx-CH-Rvo" firstAttribute="leading" secondItem="b7o-hz-qqB" secondAttribute="trailing" constant="14" id="htR-Od-I0V"/>
+                                        <constraint firstItem="b7o-hz-qqB" firstAttribute="top" secondItem="bPM-MU-4Es" secondAttribute="bottom" constant="-5" id="cy3-hT-PmX"/>
+                                        <constraint firstAttribute="centerX" secondItem="bPM-MU-4Es" secondAttribute="centerX" id="fh1-D5-vaL"/>
+                                        <constraint firstItem="bPM-MU-4Es" firstAttribute="top" secondItem="EJF-eT-Hws" secondAttribute="topMargin" constant="-8" id="iwk-z9-Vaw"/>
+                                        <constraint firstAttribute="centerX" secondItem="b7o-hz-qqB" secondAttribute="centerX" constant="13.5" id="lfA-yz-i96"/>
+                                        <constraint firstItem="7Zx-CH-Rvo" firstAttribute="leading" secondItem="bPM-MU-4Es" secondAttribute="trailing" constant="54" id="lxG-ef-bDY"/>
+                                        <constraint firstItem="bPM-MU-4Es" firstAttribute="leading" secondItem="EJF-eT-Hws" secondAttribute="leadingMargin" constant="11" id="mO6-cl-02I"/>
+                                        <constraint firstItem="b7o-hz-qqB" firstAttribute="trailing" secondItem="EJF-eT-Hws" secondAttribute="trailingMargin" id="oh5-h5-YHA"/>
                                         <constraint firstItem="bPM-MU-4Es" firstAttribute="top" secondItem="EJF-eT-Hws" secondAttribute="topMargin" constant="-8" id="p2P-gi-fs4"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="b7o-hz-qqB" secondAttribute="bottom" constant="-8" id="pOf-A7-jb0"/>
+                                        <constraint firstItem="7Zx-CH-Rvo" firstAttribute="leading" secondItem="bPM-MU-4Es" secondAttribute="trailing" constant="33" id="r2W-FX-IYn"/>
+                                        <constraint firstItem="b7o-hz-qqB" firstAttribute="top" secondItem="bPM-MU-4Es" secondAttribute="bottom" constant="-5" id="vQI-Uw-W47"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="b7o-hz-qqB" secondAttribute="bottom" constant="-8.5" id="vfw-H4-QQn"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="b7o-hz-qqB" secondAttribute="bottom" constant="-8" id="wI4-oR-bxL"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="7Zx-CH-Rvo" secondAttribute="trailing" constant="6" id="x57-p7-Ttp"/>
                                         <constraint firstAttribute="centerX" secondItem="bPM-MU-4Es" secondAttribute="centerX" id="xwE-YW-AmF"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="b7o-hz-qqB" secondAttribute="bottom" constant="-8.5" id="y9B-Jv-Crg"/>
                                     </constraints>
                                     <variation key="default">
                                         <mask key="constraints">
+                                            <exclude reference="08c-r3-nC0"/>
                                             <exclude reference="0Me-kT-LzD"/>
+                                            <exclude reference="C9S-vK-9jX"/>
+                                            <exclude reference="EpI-Fh-ace"/>
+                                            <exclude reference="Ijd-hm-Pu4"/>
+                                            <exclude reference="lfA-yz-i96"/>
+                                            <exclude reference="pOf-A7-jb0"/>
+                                            <exclude reference="vQI-Uw-W47"/>
+                                            <exclude reference="wI4-oR-bxL"/>
+                                            <exclude reference="y9B-Jv-Crg"/>
+                                            <exclude reference="1Rc-x4-EkD"/>
+                                            <exclude reference="8Yi-Zh-liF"/>
+                                            <exclude reference="JXm-dS-bEE"/>
+                                            <exclude reference="Nof-tN-Chj"/>
+                                            <exclude reference="fh1-D5-vaL"/>
+                                            <exclude reference="iwk-z9-Vaw"/>
+                                            <exclude reference="mO6-cl-02I"/>
+                                            <exclude reference="p2P-gi-fs4"/>
+                                            <exclude reference="xwE-YW-AmF"/>
+                                            <exclude reference="0xD-Yc-CbJ"/>
+                                            <exclude reference="96D-RW-YxI"/>
                                             <exclude reference="Bsj-ob-wFD"/>
+                                            <exclude reference="CFy-Wh-Efd"/>
                                             <exclude reference="Eyg-5I-gNi"/>
+                                            <exclude reference="GgX-vL-BBr"/>
                                             <exclude reference="Ke9-go-eFf"/>
                                             <exclude reference="OPq-5O-p0G"/>
+                                            <exclude reference="lxG-ef-bDY"/>
+                                            <exclude reference="r2W-FX-IYn"/>
                                         </mask>
                                     </variation>
                                 </tableViewCellContentView>

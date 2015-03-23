@@ -30,6 +30,7 @@
 		4BD0AE8D1ABDCC3900C73CCE /* History+DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BD0AE8C1ABDCC3900C73CCE /* History+DataManager.m */; };
 		4BD0AE901ABDF52200C73CCE /* ServerChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BD0AE8F1ABDF52200C73CCE /* ServerChannel.m */; };
 		4BD0AE931ABDFB9000C73CCE /* ServerChannel+DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BD0AE921ABDFB9000C73CCE /* ServerChannel+DataManager.m */; };
+		4BD0AECA1ABF097100C73CCE /* SessionInitTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BD0AEC91ABF097100C73CCE /* SessionInitTest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +101,7 @@
 		4BD0AE8F1ABDF52200C73CCE /* ServerChannel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerChannel.m; sourceTree = "<group>"; };
 		4BD0AE911ABDFB9000C73CCE /* ServerChannel+DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ServerChannel+DataManager.h"; sourceTree = "<group>"; };
 		4BD0AE921ABDFB9000C73CCE /* ServerChannel+DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ServerChannel+DataManager.m"; sourceTree = "<group>"; };
+		4BD0AEC91ABF097100C73CCE /* SessionInitTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SessionInitTest.m; path = MonkeyChatTests/SessionInitTest.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				4B9760B41ABBCF5500414CC9 /* Supporting Files */,
+				4BD0AEC91ABF097100C73CCE /* SessionInitTest.m */,
 			);
 			name = MonkeyChatTests;
 			path = "IRC-TestTests";
@@ -426,6 +429,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4BD0AECA1ABF097100C73CCE /* SessionInitTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -578,10 +582,12 @@
 		4B1D62DF1AB682B500E9081A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MonkeyChat.app/MonkeyChat";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
+					"$(PROJECT_DIR)/MonkeyChat",
+					"$(PROJECT_DIR)/External",
 				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -590,22 +596,24 @@
 				INFOPLIST_FILE = "MonkeyChatTests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = MonkeyChatTests;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IRC-Test.app/IRC-Test";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MonkeyChat.app/MonkeyChat";
 			};
 			name = Debug;
 		};
 		4B1D62E01AB682B500E9081A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MonkeyChat.app/MonkeyChat";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
+					"$(PROJECT_DIR)/MonkeyChat",
+					"$(PROJECT_DIR)/External",
 				);
 				INFOPLIST_FILE = "MonkeyChatTests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = MonkeyChatTests;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IRC-Test.app/IRC-Test";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MonkeyChat.app/MonkeyChat";
 			};
 			name = Release;
 		};
