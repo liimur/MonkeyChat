@@ -14,8 +14,6 @@
 
 @interface AppDelegate ()
 
-@property (strong, nonatomic) SessionManager *sessionManager;
-
 @end
 
 @implementation AppDelegate

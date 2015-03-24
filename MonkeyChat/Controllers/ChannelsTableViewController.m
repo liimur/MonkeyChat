@@ -26,6 +26,10 @@
     self.tableView.estimatedRowHeight = 44.0;
 #endif
     
+//    self.edgesForExtendedLayout=UIRectEdgeNone;
+//    self.extendedLayoutIncludesOpaqueBars=NO;
+//    self.automaticallyAdjustsScrollViewInsets=NO;
+    
     self.managedObjectContext = [[CoreDataManager sharedManager] managedObjectContext];
 }
 

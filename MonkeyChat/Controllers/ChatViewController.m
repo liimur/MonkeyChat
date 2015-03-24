@@ -10,18 +10,22 @@
 #import "CoreDataManager.h"
 #import "ChatCell.h"
 #import "History.h"
+#import "ChannelManager.h"
+#import "AppDelegate.h"
 
-@interface ChatViewController () <NSFetchedResultsControllerDelegate>
+@interface ChatViewController () <NSFetchedResultsControllerDelegate, UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *chatHistoryTableView;
 @property (weak, nonatomic) IBOutlet UIButton *sendMessageButton;
 @property (weak, nonatomic) IBOutlet UITextField *messageText;
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (strong, nonatomic) NSDateFormatter *formatter;
+@property (strong,nonatomic) AppDelegate *appDelegate;
 @end
 
 @implementation ChatViewController
 - (IBAction)sendButtonPressed:(id)sender {
+    [self sendTextFromTextField:self.messageText];
 }
 
 - (void)viewDidLoad {
@@ -37,6 +41,8 @@
     [self.formatter setDateFormat:@"hh:mm a"];
     
     self.managedObjectContext = [[CoreDataManager sharedManager] managedObjectContext];
+    self.appDelegate = (AppDelegate*)[[UIApplication sharedApplication]delegate];
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -174,6 +180,9 @@
 - (void)controllerDidChangeContent:(NSFetchedResultsController *)controller
 {
     [self.chatHistoryTableView endUpdates];
+    [self.chatHistoryTableView scrollToRowAtIndexPath:self.lastIndexPath
+                                     atScrollPosition:UITableViewScrollPositionBottom
+                                             animated:YES];
 }
 
 /*
@@ -185,5 +194,31 @@
  [self.tableView reloadData];
  }
  */
+
+#pragma mark - UITextView delegate methods
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [self sendTextFromTextField:textField];
+    return NO;
+}
+
+#pragma mark - Helpe methods
+
+- (void)sendTextFromTextField:(UITextField *)textField
+{
+    ChannelManager *channelManager = [self.appDelegate.sessionManager.channelManagers objectForKey:DEFAULT_CHANNEL_NAME];
+    NSString *text = [textField text];
+    [channelManager sendText:text];
+    textField.text = @"";
+    [textField resignFirstResponder];
+}
+
+-(NSIndexPath *)lastIndexPath
+{
+    NSInteger lastSectionIndex = MAX(0, [self.chatHistoryTableView numberOfSections] - 1);
+    NSInteger lastRowIndex = MAX(0, [self.chatHistoryTableView numberOfRowsInSection:lastSectionIndex] - 1);
+    return [NSIndexPath indexPathForRow:lastRowIndex inSection:lastSectionIndex];
+}
 
 @end

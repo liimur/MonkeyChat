@@ -37,6 +37,12 @@
                         fromManager:self
                            fromNick:self.channel.session.nickname
                               onDate:[NSDate date]];
+        
+        [[History new] saveWithChannel:self.channel.name
+                               message:text
+                                  time:[NSDate date]
+                              nickname:self.channel.session.nickname
+                                server:@"DALNET"];
     }
     else
     {
